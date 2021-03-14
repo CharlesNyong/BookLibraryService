@@ -1,3 +1,9 @@
+
+# About Repo
+
+This is a backend API service code that defines the personalize library service endpoints to be called by a frontend code base. It was built in laravel.
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
