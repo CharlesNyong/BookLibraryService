@@ -14,7 +14,7 @@ class updateBook extends Controller
         $blnRead = strtolower($bookRequest->read);
 
         //echo "updating with the following data: ". $status . " date read: ". $bookRequest->dateRead . " Book name: ". $bookRequest->name;
-        Book::where("user_id", 1)->where("BookName", $bookRequest->name)->update(['Read' => $blnRead, 'created_at'=> $bookRequest->dateRead]);
+        Book::where("user_id", $bookRequest->userID)->where("BookName", $bookRequest->name)->update(['Read' => $blnRead, 'created_at'=> $bookRequest->dateRead]);
         
         
         // update successful

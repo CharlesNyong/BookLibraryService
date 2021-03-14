@@ -14,7 +14,7 @@ class AddBooks extends Controller
     public function index(Request $bookRequest){
 
         // change to authenticated user
-        $user = User::find(1);
+        $user = User::find($bookRequest->userID);
        
         //echo "Current user: ". $user . "\n";
          //echo "submitted request obj: book name: ". $bookRequest->name . " book author: ". $bookRequest->author. " status: ". $bookRequest->read;

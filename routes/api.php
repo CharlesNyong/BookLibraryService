@@ -18,13 +18,29 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // get all read books
-Route::get('/reads', "ReadBooks@index");
+Route::get('/reads/{userID}', "ReadBooks@index");
+
+// get particular user
+Route::get('/user/{emailID}', "userController@getUserByEmail");
+
+// get particular user
+Route::get('/user/username/{username}', "userController@getUserByUserName");
 
 // get all pending reads
-Route::get('/pendingReads', "PendingReads@index");
+Route::get('/pendingReads/{userID}', "PendingReads@index");
 
 // get all pending reads
 Route::post('/addBooks', "AddBooks@index");
 
+// add user
+Route::post('/user', "userController@addNewUser");
+
 // update a book status
 Route::post('/updateBookStatus', "UpdateBook@index");
+
+Route::post('/survey', 'userController@sendSurvey');
+
+// get month to read counts
+Route::get('/monthToReadCounts/{userID}', "monthToReadCounts@index");
+
+Route::put('/user', "userController@updateUser");
