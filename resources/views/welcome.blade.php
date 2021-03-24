@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome To Book Library API
+                    Welcome To Library Plus API
                 </div>
 
                 <div class="links">
