@@ -36,7 +36,7 @@ Route::post('/addBooks', "AddBooks@index");
 Route::post('/user', "userController@addNewUser");
 
 // update a book status
-Route::post('/updateBookStatus', "UpdateBook@index");
+Route::post('/updateBookStatus', "updateBook@index");
 
 Route::post('/survey', 'userController@sendSurvey');
 
